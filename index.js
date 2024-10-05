@@ -11,6 +11,10 @@ app.use(cors());
 const userRouter = require("./Routes/userRoutes");
 app.use("/api/user", userRouter);
 
+app.get("/",(req,res)=>{
+  res.send("backend working properly.")
+})
+
 //mongoose configuration and server configuration
 mongoose
   .connect(process.env.DB_URL)
